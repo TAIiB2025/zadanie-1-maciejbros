@@ -1,0 +1,18 @@
+<table [class.promocja]="produkt.czyPromocja">
+  <thead>
+    <tr>
+      <th>Nazwa</th>
+      <th>Cena</th>
+      <th>Data utworzenia</th>
+      <th>Dodaj do koszyka</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ produkt.nazwa }}</td>
+      <td>{{ produkt.cena.toFixed(2) }} zł</td>
+      <td>{{ produkt.dataUtworzenia | date:'dd.MM.yyyy' }}r.</td>
+      <td><button (click)="onDodajDoKoszyka()">Dodaj do koszyka</button></td>
+    </tr>
+  </tbody>
+</table>
